@@ -5,3 +5,5 @@
 [ddl commmand with contraint](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp2.txt)
 #experiment 3
 [dml commands](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp3.txt)
+#experiment 4
+[DML commands update&delete](
