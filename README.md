@@ -8,4 +8,4 @@
 #experiment 4
 [DML commands update&delete](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp4.txt)
 #experiment 5
-[select with various clauses](
+[select with various clauses](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp5.txt)
