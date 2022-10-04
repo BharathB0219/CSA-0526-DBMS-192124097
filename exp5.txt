@@ -1,0 +1,164 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 25
+Server version: 5.5.62 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use bharath;
+Database changed
+mysql> show tables;
++-------------------+
+| Tables_in_bharath |
++-------------------+
+| employee          |
+| student           |
++-------------------+
+2 rows in set (0.02 sec)
+
+mysql> select * from student;
++--------+------------+--------+-----------+------------+------+
+| std_id | std_NAME   | gender | phone     | DOB        | year |
++--------+------------+--------+-----------+------------+------+
+|    999 | krishvanth | M      |  63793896 | 2004-07-15 |    2 |
+|    219 | murali     | M      | 936311820 | 2004-01-10 |    1 |
++--------+------------+--------+-----------+------------+------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO Student VALUES(645,'srinivasan','M',9182571,'2002/08/10',2),(254,'booshan','M',8179646,'2003/04/09',2),(153,'gopal','F','78935384','2005/06/25',3);
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select *from student;
++--------+------------+--------+-----------+------------+------+
+| std_id | std_NAME   | gender | phone     | DOB        | year |
++--------+------------+--------+-----------+------------+------+
+|    254 | booshan    | M      |   8179646 | 2003-04-09 |    2 |
+|    153 | gopal      | F      |  78935384 | 2005-06-25 |    3 |
+|    999 | krishvanth | M      |  63793896 | 2004-07-15 |    2 |
+|    219 | murali     | M      | 936311820 | 2004-01-10 |    1 |
+|    645 | srinivasan | M      |   9182571 | 2002-08-10 |    2 |
++--------+------------+--------+-----------+------------+------+
+5 rows in set (0.00 sec)
+
+mysql> select *from student where year="2";
++--------+------------+--------+----------+------------+------+
+| std_id | std_NAME   | gender | phone    | DOB        | year |
++--------+------------+--------+----------+------------+------+
+|    254 | booshan    | M      |  8179646 | 2003-04-09 |    2 |
+|    999 | krishvanth | M      | 63793896 | 2004-07-15 |    2 |
+|    645 | srinivasan | M      |  9182571 | 2002-08-10 |    2 |
++--------+------------+--------+----------+------------+------+
+3 rows in set (0.01 sec)
+
+mysql> select *from the student where std_id='999';
+ERROR 1146 (42S02): Table 'bharath.the' doesn't exist
+mysql> select * from student;
++--------+------------+--------+-----------+------------+------+
+| std_id | std_NAME   | gender | phone     | DOB        | year |
++--------+------------+--------+-----------+------------+------+
+|    254 | booshan    | M      |   8179646 | 2003-04-09 |    2 |
+|    153 | gopal      | F      |  78935384 | 2005-06-25 |    3 |
+|    999 | krishvanth | M      |  63793896 | 2004-07-15 |    2 |
+|    219 | murali     | M      | 936311820 | 2004-01-10 |    1 |
+|    645 | srinivasan | M      |   9182571 | 2002-08-10 |    2 |
++--------+------------+--------+-----------+------------+------+
+5 rows in set (0.00 sec)
+
+mysql> select *from the student where std_id='999';
+ERROR 1146 (42S02): Table 'bharath.the' doesn't exist
+mysql> select *from student where std_id='999';
++--------+------------+--------+----------+------------+------+
+| std_id | std_NAME   | gender | phone    | DOB        | year |
++--------+------------+--------+----------+------------+------+
+|    999 | krishvanth | M      | 63793896 | 2004-07-15 |    2 |
++--------+------------+--------+----------+------------+------+
+1 row in set (0.00 sec)
+
+mysql> alter table student add marks int(3);
+Query OK, 5 rows affected (0.02 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> update student set mark=95 where year='2';
+ERROR 1054 (42S22): Unknown column 'mark' in 'field list'
+mysql> select *from student;
++--------+------------+--------+-----------+------------+------+-------+
+| std_id | std_NAME   | gender | phone     | DOB        | year | marks |
++--------+------------+--------+-----------+------------+------+-------+
+|    254 | booshan    | M      |   8179646 | 2003-04-09 |    2 |  NULL |
+|    153 | gopal      | F      |  78935384 | 2005-06-25 |    3 |  NULL |
+|    999 | krishvanth | M      |  63793896 | 2004-07-15 |    2 |  NULL |
+|    219 | murali     | M      | 936311820 | 2004-01-10 |    1 |  NULL |
+|    645 | srinivasan | M      |   9182571 | 2002-08-10 |    2 |  NULL |
++--------+------------+--------+-----------+------------+------+-------+
+5 rows in set (0.00 sec)
+
+mysql> update student set marks=95 where year='2';
+Query OK, 3 rows affected (0.02 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> update student set marks=100 where std_NAME="murali";
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update student set marks=70 where phone="9182571";
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select *from student;
++--------+------------+--------+-----------+------------+------+-------+
+| std_id | std_NAME   | gender | phone     | DOB        | year | marks |
++--------+------------+--------+-----------+------------+------+-------+
+|    254 | booshan    | M      |   8179646 | 2003-04-09 |    2 |    95 |
+|    153 | gopal      | F      |  78935384 | 2005-06-25 |    3 |  NULL |
+|    999 | krishvanth | M      |  63793896 | 2004-07-15 |    2 |    95 |
+|    219 | murali     | M      | 936311820 | 2004-01-10 |    1 |   100 |
+|    645 | srinivasan | M      |   9182571 | 2002-08-10 |    2 |    70 |
++--------+------------+--------+-----------+------------+------+-------+
+5 rows in set (0.00 sec)
+
+mysql> update student set marks=90 where phone="78935384";
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select *from student;
++--------+------------+--------+-----------+------------+------+-------+
+| std_id | std_NAME   | gender | phone     | DOB        | year | marks |
++--------+------------+--------+-----------+------------+------+-------+
+|    254 | booshan    | M      |   8179646 | 2003-04-09 |    2 |    95 |
+|    153 | gopal      | F      |  78935384 | 2005-06-25 |    3 |    90 |
+|    999 | krishvanth | M      |  63793896 | 2004-07-15 |    2 |    95 |
+|    219 | murali     | M      | 936311820 | 2004-01-10 |    1 |   100 |
+|    645 | srinivasan | M      |   9182571 | 2002-08-10 |    2 |    70 |
++--------+------------+--------+-----------+------------+------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select*from student where std_NAME like 'G%';
++--------+----------+--------+----------+------------+------+-------+
+| std_id | std_NAME | gender | phone    | DOB        | year | marks |
++--------+----------+--------+----------+------------+------+-------+
+|    153 | gopal    | F      | 78935384 | 2005-06-25 |    3 |    90 |
++--------+----------+--------+----------+------------+------+-------+
+1 row in set (0.00 sec)
+
+mysql>  select*from student where gender like '%F%';
++--------+----------+--------+----------+------------+------+-------+
+| std_id | std_NAME | gender | phone    | DOB        | year | marks |
++--------+----------+--------+----------+------------+------+-------+
+|    153 | gopal    | F      | 78935384 | 2005-06-25 |    3 |    90 |
++--------+----------+--------+----------+------------+------+-------+
+1 row in set (0.00 sec)
+
+mysql>  select*from student where std_NAME like '%i';
++--------+----------+--------+-----------+------------+------+-------+
+| std_id | std_NAME | gender | phone     | DOB        | year | marks |
++--------+----------+--------+-----------+------------+------+-------+
+|    219 | murali   | M      | 936311820 | 2004-01-10 |    1 |   100 |
++--------+----------+--------+-----------+------------+------+-------+
+1 row in set (0.00 sec)
