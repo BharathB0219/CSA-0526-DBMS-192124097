@@ -1,0 +1,134 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 36
+Server version: 5.5.62 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use bharath
+Database changed
+mysql> select*from student;
++--------+------------+--------+-----------+------------+------+-------+---------+
+| std_id | std_NAME   | gender | phone     | DOB        | year | marks | subject |
++--------+------------+--------+-----------+------------+------+-------+---------+
+|    254 | booshan    | M      |   8179646 | 2003-04-09 |    2 |    95 | C++     |
+|    153 | gopal      | F      |  78935384 | 2005-06-25 |    3 |    90 | DBMS    |
+|    999 | krishvanth | M      |  63793896 | 2004-07-15 |    2 |    95 | C++     |
+|    219 | murali     | M      | 936311820 | 2004-01-10 |    1 |   100 | C       |
+|    645 | srinivasan | M      |   9182571 | 2002-08-10 |    2 |    70 | C++     |
++--------+------------+--------+-----------+------------+------+-------+---------+
+5 rows in set (0.00 sec)
+
+mysql> create table mdept(deptid int(5),deptname varchar(20),rollno int(10));
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> insert mdept value(1,"AI&DS",192124087);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into mdept values(2,"ECE",192011079);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into mdept values(2,"ECE",192011010);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> update mdept set Deptid=3 where Rollno=192011010;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select*from mdept;
++--------+----------+-----------+
+| deptid | deptname | rollno    |
++--------+----------+-----------+
+|      1 | AI&DS    | 192124087 |
+|      2 | ECE      | 192011079 |
+|      3 | ECE      | 192011010 |
++--------+----------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> update mdept set Deptname="BME" where Rollno=192011079;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select*from mdept;
++--------+----------+-----------+
+| deptid | deptname | rollno    |
++--------+----------+-----------+
+|      1 | AI&DS    | 192124087 |
+|      2 | BME      | 192011079 |
+|      3 | ECE      | 192011010 |
++--------+----------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> select Deptid,Deptname from mdept,student where student.std_id=mdept.Rollno;
++--------+----------+
+| Deptid | Deptname |
++--------+----------+
+|      1 | CSE      |
+|      2 | BME      |
++--------+----------+
+
+mysql> select Deptid,Deptname,Rollno from mdept,student where student.std_id=mdept.Rollno;
++--------+----------+-----------+
+| Deptid | Deptname | Rollno    |
++--------+----------+-----------+
+|      1 | CSE      | 192011090 |
+|      2 | BME      | 192011079 |
++--------+----------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> select Name, Deptid,Deptname,Rollno from mdept m,mentees m1 where m1.Regno=m.Rollno;
++---------+--------+----------+-----------+
+| Name    | Deptid | Deptname | Rollno    |
++---------+--------+----------+-----------+
+| booshan |      1 | CSE      | 192011090 |
+| gopal   |      2 | BME      | 192011079 |
++---------+--------+----------+-----------+
+2 rows in set (0.00 sec)
+mysql> select Name,Dept, Deptid,Deptname,Rollno from mdept,mentees where mentees.Regno=mdept.Rollno;
++---------+------+--------+----------+-----------+
+| Name    | Dept | Deptid | Deptname | Rollno    |
++---------+------+--------+----------+-----------+
+| booshan | CSE  |      1 | CSE      | 192011090 |
+| gopal   | BME  |      2 | BME      | 192011079 |
++---------+------+--------+----------+-----------+
+2 rows in set (0.00 sec)
+mysql> select Rollno,Deptname,Name,DOB from mdept left outer join mentees on mdept.Rollno=mentees.Regno;
++-----------+----------+---------+------------+
+| Rollno    | Deptname | Name    | DOB        |
++-----------+----------+---------+------------+
+| 192011090 | CSE      | booshan | 2003-04-09 |
+| 192011079 | BME      | gopal   | 2005-06-25 |
+| 192011010 | ECE      | NULL    | NULL       |
++-----------+----------+---------+------------+
+3 rows in set (0.00 sec)
+mysql> select Rollno,Deptname,Name,DOB from mdept right outer join mentees on mdept.Rollno=mentees.Regno;
++-----------+----------+---------+--------------+
+| Rollno    | Deptname | Name    | DOB        	|
++-----------+----------+---------+--------------+
+| 192011090 | CSE      | booshan | 2003-04-09  	|
+| 192011079 | BME      | gopal   | 2005-06-25  	|
+|      NULL | NULL     | murali  | 2004-01-10 	|
+|      NULL | NULL     | Dhivya  | 2002-08-10 	|
++-----------+----------+---------+--------------+
+4 rows in set (0.00 sec)
+mysql> insert into mdept values(4,"ENE",192011095);
+Query OK, 1 row affected (0.01 sec)
+mysql> insert into mdept values(5,"COM",192211080);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select Rollno,Deptname,Name,DOB from mdept right outer join mentees on mdept.Rollno=mentees.Regno;
++-----------+----------+---------+------------+
+| Rollno    | Deptname | Name    | DOB	    |
++-----------+----------+---------+------------+
+| 192011090 | CSE      | booshan | 2003-04-09 |
+| 192011079 | BME      | gopal   | 2005-06-25 |
+| 192011095 | ENE      | murali  | 2004-01-10 |
+| 192211080 | COM      | Dhivya  | 2002-08-10 |
++-----------+----------+---------+------------+
+4 rows in set (0.00 sec)
