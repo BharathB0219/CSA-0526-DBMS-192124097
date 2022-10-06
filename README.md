@@ -26,4 +26,16 @@
 #experiment 13
 [TCL Commands – SAVEPOINT](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp13.txt)
 #experiment 14 
-[DCL Commands – GRANT, REVOKE](
+[DCL Commands – GRANT, REVOKE](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp14.txt)
+#experiment 15
+[
+#experiment 16 
+[
+#experiment 17
+[
+#experiment 18
+[
+#experiment 19
+[
+#experiment 20
+[
