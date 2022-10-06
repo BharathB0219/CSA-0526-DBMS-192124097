@@ -28,14 +28,14 @@
 #experiment 14 
 [DCL Commands – GRANT, REVOKE](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp14.txt)
 #experiment 15
-[
+[High Level Programming Extentions – Procedures](
 #experiment 16 
-[
+[High Level Programming Extensions – Function](
 #experiment 17
-[
+[SQL String Functions – Repeat, Replicate](
 #experiment 18
-[
+[TCL Commands- COMMIT, ROLLBACK](
 #experiment 19
-[
+[Database Connectivity – Using Simple MySQL](
 #experiment 20
-[
+[Case Scenario Basic SQL Queries Implementation for HRM ](
