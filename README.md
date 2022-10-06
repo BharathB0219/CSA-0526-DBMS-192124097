@@ -9,3 +9,7 @@
 [DML commands update&delete](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp4.txt)
 #experiment 5
 [select with various clauses](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp5.txt)
+#experiment 6 
+[select with various clauses 2](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp6.txt)
+#experiment 7
+[
