@@ -18,4 +18,6 @@
 #experiment 9
 [. Joins - EquiJoin, InnerJoin, Outer Join](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp9.txt)
 #experiment 10
-[VIEW, INDEX, SEQUENCE](
+[VIEW, INDEX, SEQUENCE](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp10.txt)
+#experiment 11
+[Simple programming exercise using CASE, IF, ITERATE, LEAVE, LOOP](
