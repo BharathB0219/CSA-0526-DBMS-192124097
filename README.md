@@ -20,4 +20,6 @@
 #experiment 10
 [VIEW, INDEX, SEQUENCE](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp10.txt)
 #experiment 11
-[Simple programming exercise using CASE, IF, ITERATE, LEAVE, LOOP](
+[Simple programming exercise using CASE, IF, ITERATE, LEAVE, LOOP](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp11.txt)
+#experriment 12
+[Simple programming exercise using WHILE](
