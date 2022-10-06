@@ -16,4 +16,6 @@
 #experiment 8
 [subquery&corelated query](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp8.txt)
 #experiment 9
-[. Joins - EquiJoin, InnerJoin, Outer Join](
+[. Joins - EquiJoin, InnerJoin, Outer Join](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp9.txt)
+#experiment 10
+[VIEW, INDEX, SEQUENCE](
