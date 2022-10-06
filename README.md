@@ -12,4 +12,6 @@
 #experiment 6 
 [select with various clauses 2](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp6.txt)
 #experiment 7
-[select with various clauses 3](
+[select with various clauses 3](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp7.txt)
+#experiment 8
+[subquery&corelated query](
