@@ -24,4 +24,6 @@
 #experriment 12
 [Simple programming exercise using WHILE](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp12.txt)
 #experiment 13
-[TCL Commands – SAVEPOINT](
+[TCL Commands – SAVEPOINT](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp13.txt)
+#experiment 14 
+[DCL Commands – GRANT, REVOKE](
