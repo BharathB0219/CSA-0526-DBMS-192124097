@@ -30,12 +30,12 @@
 #experiment 15
 [High Level Programming Extentions – Procedures](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp15.txt)
 #experiment 16 
-[High Level Programming Extensions – Function](
+[High Level Programming Extensions – Function](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp16.txt)
 #experiment 17
-[SQL String Functions – Repeat, Replicate](
+[SQL String Functions – Repeat, Replicate](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp17.txt)
 #experiment 18
-[TCL Commands- COMMIT, ROLLBACK](
+[TCL Commands- COMMIT, ROLLBACK](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp18.txt)
 #experiment 19
 [Database Connectivity – Using Simple MySQL](
 #experiment 20
-[Case Scenario Basic SQL Queries Implementation for HRM ](
+[Case Scenario Basic SQL Queries Implementation for HRM ](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp20.txt)
