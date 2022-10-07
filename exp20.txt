@@ -1,0 +1,130 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 82
+Server version: 5.5.62 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use bharath
+Database changed
+mysql> show tables;
++-------------------+
+| Tables_in_bharath |
++-------------------+
+| employee          |
+| marks_view        |
+| mdept             |
+| movies            |
+| per               |
+| score             |
+| student           |
+| student1          |
++-------------------+
+8 rows in set (0.01 sec)
+
+mysql> create table staff(Id int(4),Name varchar(20),DOB date,DOJ date,salary int(6),address varchar(50));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc staff;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| Id      | int(4)      | YES  |     | NULL    |       |
+| Name    | varchar(20) | YES  |     | NULL    |       |
+| DOB     | date        | YES  |     | NULL    |       |
+| DOJ     | date        | YES  |     | NULL    |       |
+| salary  | int(6)      | YES  |     | NULL    |       |
+| address | varchar(50) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+6 rows in set (0.02 sec)
+
+mysql> insert into staff values( 1,"Bharath",'2002-10-02','2022-09-23',70000,"chennai");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into staff values(10,"Booshan",'2004-10-02','2021-04-08',30000,"kerala");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into staff values(3,"Murali",'2002-04-02','2021-02-28',50000,"london");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into staff values(2,"Zubair",'2003-03-24','2022-02-27',150000,"Trichy");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into staff values(4,"Santhosh",'2004-07-03','2021-02-17',130000,"Ooty");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select*from staff;
++------+----------+------------+------------+--------+---------+
+| Id   | Name     | DOB        | DOJ        | salary | address |
++------+----------+------------+------------+--------+---------+
+|    1 | Bharath  | 2002-10-02 | 2022-09-23 |  70000 | chennai |
+|   10 | Booshan  | 2004-10-02 | 2021-04-08 |  30000 | kerala  |
+|    3 | Murali   | 2002-04-02 | 2021-02-28 |  50000 | london  |
+|    2 | Zubair   | 2003-03-24 | 2022-02-27 | 150000 | Trichy  |
+|    4 | Santhosh | 2004-07-03 | 2021-02-17 | 130000 | Ooty    |
++------+----------+------------+------------+--------+---------+
+5 rows in set (0.00 sec)
+
+mysql> create table Bdept(Dept_id int(4),Dept_name varchar(20),No_of_Persons int(4));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> insert into Bdept values(1,"Manager",2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Bdept values(2,"TL",5);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into Bdept values(3,"Employee",50);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into Bdept values(4,"supervisor",5);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select*from Bdept;
++---------+------------+---------------+
+| Dept_id | Dept_name  | No_of_Persons |
++---------+------------+---------------+
+|       1 | Manager    |             2 |
+|       2 | TL         |             5 |
+|       3 | Employee   |            50 |
+|       4 | supervisor |             5 |
++---------+------------+---------------+
+4 rows in set (0.00 sec)
+
+mysql> select sum(Salary),min(salary),max(salary),avg(salary) from staff;
++-------------+-------------+-------------+-------------+
+| sum(Salary) | min(salary) | max(salary) | avg(salary) |
++-------------+-------------+-------------+-------------+
+|      585000 |       30000 |      250000 | 117000.0000 |
++-------------+-------------+-------------+-------------+
+1 row in set (0.01 sec)
+
+mysql> select Name,salary from staff where ID=10;
++---------+--------+
+| Name    | salary |
++---------+--------+
+| Booshan |  30000 |
++---------+--------+
+1 row in set (0.00 sec)
+
+mysql> delete from staff where ID=10;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from staff;
++------+----------+------------+------------+--------+---------+
+| Id   | Name     | DOB        | DOJ        | salary | address |
++------+----------+------------+------------+--------+---------+
+|    1 | Bharath  | 2002-10-02 | 2022-09-23 | 105000 | chennai |
+|    3 | Murali   | 2002-04-02 | 2021-02-28 |  50000 | london  |
+|    2 | Zubair   | 2003-03-24 | 2022-02-27 | 150000 | Trichy  |
+|    4 | Santhosh | 2004-07-03 | 2021-02-17 | 250000 | Ooty    |
++------+----------+------------+------------+--------+---------+
+4 rows in set (0.00 sec)
+
+mysql>
