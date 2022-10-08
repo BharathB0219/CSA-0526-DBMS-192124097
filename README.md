@@ -36,6 +36,8 @@
 #experiment 18
 [TCL Commands- COMMIT, ROLLBACK](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp18.txt)
 #experiment 19
-[Database Connectivity – Using Simple MySQL](
+[Database Connectivity – Using Simple MySQL](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp19.txt)
 #experiment 20
 [Case Scenario Basic SQL Queries Implementation for HRM ](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp20.txt)
+#experiment 21
+[
