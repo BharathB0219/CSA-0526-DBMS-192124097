@@ -40,4 +40,12 @@
 #experiment 20
 [Case Scenario Basic SQL Queries Implementation for HRM ](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp20.txt)
 #experiment 21
-[
+[exp 21](https://github.com/BharathB0219/CSA-0526-DBMS-192124097/blob/main/exp21.txt)
+#experiment 22
+[exp 22](
+#experiment 23
+[exp23](
+#experiment 24
+[exp 24](
+#experiment 25
+[exp 25](
